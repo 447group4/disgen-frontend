@@ -1,0 +1,323 @@
+$main-back: #0A1013;
+$main-font-col: #fff;
+$third-header-size: 27px;
+$second-header-size: 34px;
+$main-nav-col: #41403E;
+$link-hover-col: #448E9D;
+$bright-blue: #448E9D;
+$caption-size: 49px;
+$header-back: #E4E4E4;
+$main-pic: $header-back url('/img/homebg_dark.png') 0 fixed no-repeat;
+$footer-font-col: #535353;
+$footer-caption-col: #44423C;
+$arial: Arial, Helvetica, sans-serif;
+$oswald: 'Oswald', Arial, Helvetica, sans-serif;
+$button-col: #35484A;
+
+//BREAKPOINTS
+
+$large: "only screen and (max-width : 1370px)";
+$medium: "only screen and (max-width : 768px)";
+$small: "only screen and (max-width : 430px)";
+
+@keyframes hovering {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(3px)
+    }
+    40% {
+        transform: translateY(0)
+    }
+    80% {
+        transform: translateY(-3px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+html, body, #root {
+    padding: 0;
+    margin: 0;
+    border: none;    
+    font-family: $oswald;
+    color: $main-font-col;
+}
+
+a {
+    text-decoration: none;
+    transition: all .2s ease;
+    display: inline-block;
+    position: relative;
+
+    &::after {
+        content: '';
+        background: transparent;
+        position: absolute;
+        height: 3px;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        transition: all .2s ease;
+    }
+
+    &:hover {
+        color:$link-hover-col;
+
+        &::after {
+            background: $bright-blue;
+        }
+    }
+}
+
+html, body {
+    height: 100%;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: $caption-size;
+    margin-bottom: 20px;
+
+    @media #{$small} {
+        font-size: $second-header-size; 
+    }
+}
+
+h2 {
+    font-size: $second-header-size;
+}
+
+h3 {
+    font-size: $third-header-size;
+}
+
+input[type=text], select {    
+    border: none;
+    height: 45px;
+    padding: 0 15px;
+    line-height: 45px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+#root {
+    background: $main-pic;
+    min-height: 100%;
+}
+
+.home {
+    height: 100vh;
+    background: $main-pic;
+
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1364px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 60px 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+
+    @media #{$large} {
+        padding: 60px 20px;
+    }
+
+    &--header, &--footer {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0;
+
+        @media #{$large} {
+            padding: 0 20px;
+        }
+    }
+}
+
+.logo {
+    width: 721px;
+    height: 239px;
+    background: url('/img/disgenlogo_large_nobg.png') no-repeat;
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+
+.prebrandtxt {
+    font-size: 32px;
+    color: #000000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-family: bold;
+}
+
+.brandlogo {
+    width: 306px;
+    height: 235px;
+    background: url('/img/stacktlogo_nobgsmall.png') no-repeat;
+}
+
+.main-nav {
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+    flex-grow: 1;
+    font-size: $second-header-size;
+
+    @media #{$medium} {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &--header {
+        font-size: 21px;
+        margin-top: 26px;
+        justify-content: flex-start;
+
+        @media #{$medium} {
+            display: none;
+        }
+
+        >a {
+            margin-right: 85px;            
+        }
+    }
+
+    &--sidebar {
+        width:100%;
+    }
+
+    &__item {
+        text-transform: uppercase;
+        display: inline-block;
+        color: $main-nav-col;  
+        
+        @media #{$medium} {
+            margin: 0 0 20px 0;
+        }
+        
+        &.active{
+            color: $link-hover-col;
+
+            &::after {
+                background: $bright-blue;
+            }
+        }
+    }
+}
+
+.header {
+    background: $header-back;
+    height: 83px;    
+    position: relative;
+    z-index: 5;
+
+    .logo {
+        margin-top: 15px;
+        width: 138px;
+        background-size: 100%;
+        margin-right: 85px;
+    }
+
+    &__logo-link {
+
+        @media #{$medium} {
+            flex-grow: 1;
+        }
+        &::after {
+            display: none;
+        }
+    }
+
+    &__menu {
+        width: 23px;
+        height: 23px;
+        background: url('/img/menu.svg') no-repeat;
+        background-size: cover;
+        margin-top: 30px;
+        cursor: pointer;
+        display: none;
+
+        @media #{$medium} {
+            display: block;
+        }
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 83px;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    background: $header-back;
+    z-index: 5;    
+}
+
+.about {
+    max-width: 1088px;
+    background: $main-back;
+    border-radius: 25px;
+
+    &__section {
+        text-align: center;
+        font-size: $caption-size;
+        position: relative;
+        margin-bottom: 100px;
+        margin-top: 100px;
+
+        &::before, &::after {
+            content: '';
+            display: block;            
+            position: absolute;
+            height: 50px;
+            width: 1px;
+            left: 50%;
+            border-left: 1px dotted #fff;
+        }
+
+        &::before {
+            top: -70px;
+        }
+        &::after {
+            bottom: -70px;
+        }
+    }
+
+    &__item:first-of-type {
+        .about__section {
+            margin-top: 0;
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+        font-size: $second-header-size;
+        margin-bottom: 13px;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+
+    &__text {
+        font-family: $arial;
+        font-size: 17px;
+        margin-bottom: 13px;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+}
