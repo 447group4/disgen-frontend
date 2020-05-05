@@ -400,5 +400,22 @@ input[type=text], select {
 }
 
 .leaflet-container {
-    height: 800px
+    height: 800px;
+    float: left;
+    width: 50%
   }
+
+h5 {
+    text-align: center;
+    font-size: 30px;
+    width: 50%;
+    display: inline-block;
+
+}
+
+h4 {
+    text-align: center;
+    width: 50%;
+    font-size: 30px;
+    display: inline-block;
+}

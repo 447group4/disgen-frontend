@@ -4,7 +4,7 @@ import {Fade} from 'react-reveal';
 import { Map, Marker, Popup, TileLayer, Circle, CircleMarker, Polyline, Polygon, Rectangle } from "react-leaflet";
 import { Icon } from "leaflet";
 
-const center = [39.2904,-76.6122]
+const center = [39.2904,-77.5]
 
 const polyline = [
   [39.29,-76.61],
@@ -33,9 +33,11 @@ const polygon = [
 
 const multiPolygon = [
   [
-    [39.34,-76.55],
-    [39.34,-76.57],
-    [39.36,-76.58],
+    [39,-76.55],
+    [39.34,-77.57],
+    [39.4,-77.58],
+    [39.1,-76.1],
+    [38.30,-76.52],
   ],
   [
     [39.35,-76.52],
@@ -68,8 +70,10 @@ const MDPage = () => {
                         </Fade>
                     )
                 })}
-                <Map center={center} zoom={8}>
-                <TileLayer
+                <h4>Old Congressional Districts</h4>
+                <h5>New Congressional Districts</h5>
+                <Map center={center} zoom={7.1}>
+                    <TileLayer
                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
@@ -80,6 +84,27 @@ const MDPage = () => {
                     <Polygon color="purple" positions={polygon} />
                     <Polygon color="red" positions={multiPolygon} />
                     <Rectangle bounds={rectangle} color="black" />
+                    <TileLayer
+                    attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                </Map>
+                <Map center={center} zoom={7.1}>
+                    <TileLayer
+                    attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    <Circle center={center} fillColor="blue" radius={200} />
+                    <CircleMarker center={[39.35, -76.6]} color="red" radius={20}>
+                    <Popup>Popup in CircleMarker</Popup>
+                    </CircleMarker>
+                    <Polygon color="purple" positions={polygon} />
+                    <Polygon color="red" positions={multiPolygon} />
+                    <Rectangle bounds={rectangle} color="black" />
+                    <TileLayer
+                    attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
                 </Map>
             </div>
         </div>
