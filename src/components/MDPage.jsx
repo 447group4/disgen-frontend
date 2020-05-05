@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { about } from '../data/mdpage';
+import { mdpage } from '../data/mdpage';
 import {Fade} from 'react-reveal';
 import { Map, Marker, Popup, TileLayer, Circle, CircleMarker, Polyline, Polygon, Rectangle } from "react-leaflet";
 import { Icon } from "leaflet";
@@ -52,15 +52,18 @@ const rectangle = [
 const MDPage = () => {
     return (
         <div className="wrapper">
-            <div className="about">
-                {about.map((item, i) => {
-                    const {section, title, text} = item;
+            <div className="statepage">
+                {mdpage.map((item, i) => {
+                    const {section, title, captext, poptext, distext, landtext} = item;
                     return (
                         <Fade key={i}>
-                            <div className="about__item">
-                                <div className="about__section">{section}</div>
-                                <div className="about__title">{title}</div>
-                                <div className="about__text">{text}</div>
+                            <div className="statepage__item">
+                                <div className="statepage__section">{section}</div>
+                                <div className="statepage__title">{title}</div>
+                                <div className="statepage__captext">{captext}</div>
+                                <div className="statepage__poptext">{poptext}</div>
+                                <div className="statepage__distext">{distext}</div>
+                                <div className="statepage__landtext">{landtext}</div>
                             </div>
                         </Fade>
                     )

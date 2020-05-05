@@ -1,5 +1,5 @@
 import React from 'react';
-import { about } from '../data/mdpage';
+import { capage } from '../data/capage';
 import {Fade} from 'react-reveal';
 import { Map, Marker, Popup, TileLayer, Circle, CircleMarker, Polyline, Polygon, Rectangle } from "react-leaflet";
 import { Icon } from "leaflet";
@@ -48,18 +48,21 @@ const rectangle = [
   [39.34,-76.61],
   [39.35,-76.62],
 ]
-const MDPage = () => {
+const CAPage = () => {
     return (
         <div className="wrapper">
-            <div className="about">
-                {about.map((item, i) => {
-                    const {section, title, text} = item;
+            <div className="statepage">
+                {capage.map((item, i) => {
+                    const {section, title, captext, poptext, distext, landtext} = item;
                     return (
                         <Fade key={i}>
-                            <div className="about__item">
-                                <div className="about__section">{section}</div>
-                                <div className="about__title">{title}</div>
-                                <div className="about__text">{text}</div>
+                            <div className="statepage__item">
+                                <div className="statepage__section">{section}</div>
+                                <div className="statepage__title">{title}</div>
+                                <div className="statepage__captext">{captext}</div>
+                                <div className="statepage__poptext">{poptext}</div>
+                                <div className="statepage__distext">{distext}</div>
+                                <div className="statepage__landtext">{landtext}</div>
                             </div>
                         </Fade>
                     )
@@ -82,4 +85,4 @@ const MDPage = () => {
     );
 };
 
-export default MDPage;
+export default CAPage;

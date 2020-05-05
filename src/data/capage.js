@@ -1,18 +1,11 @@
-export const about = [
+export const capage = [
     {
-        section: 'THE DATA',
-        title: 'WHERE DID IT COME FROM?',
-        text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-    },
-    {
-        section: 'THE SETUP',
-        title: 'HOW DOES THIS ALL WORK?',
-        text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-    },
-    {
-        section: 'THE TEAM',
-        title: 'THE PLAYERS BEHIND THE PROJECT',
-        text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+        section: 'California',
+        title: 'State Details',
+        captext: 'Capital City: Sacramento',
+        poptext: 'Population Size: 39,512,223 (2019 data)',
+        distext: 'Number of Congressional Districts: 53',
+        landtext: 'Land Area: 155,959 square miles'
     },
 
 ]

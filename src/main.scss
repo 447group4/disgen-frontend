@@ -268,7 +268,7 @@ input[type=text], select {
 }
 
 .about {
-    max-width: 1088px;
+    width: 1088px;
     background: $main-back;
     border-radius: 25px;
 
@@ -321,6 +321,84 @@ input[type=text], select {
         margin-left: 50px;
     }
 }
+
+.statepage {
+    width: 1088px;
+    background: $main-back;
+    border-radius: 25px;
+
+    &__section {
+        text-align: center;
+        font-size: $caption-size;
+        position: relative;
+        margin-bottom: 100px;
+        margin-top: 50px;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 50px;
+            width: 1px;
+            left: 50%;
+            border-left: 1px dotted #fff;
+        }
+
+        &::before {
+            top: -70px;
+        }
+        &::after {
+            bottom: -70px;
+        }
+    }
+
+    &__item:first-of-type {
+        .about__section {
+            margin-top: 0;
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__captext {
+        font-family: $arial;
+        font-size: 17px;
+        margin-bottom: 13px;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    &__title {
+        font-size: $second-header-size;
+        margin-bottom: 13px;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+
+    &__poptext {
+        font-family: $arial;
+        font-size: 17px;
+        margin-bottom: 13px;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    &__distext {
+        font-family: $arial;
+        font-size: 17px;
+        margin-bottom: 13px;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    &__landtext {
+        font-family: $arial;
+        font-size: 17px;
+        margin-bottom: 13px;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+
+}
+
 .leaflet-container {
     height: 800px
   }
