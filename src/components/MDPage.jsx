@@ -3,6 +3,9 @@ import { mdpage } from '../data/mdpage';
 import {Fade} from 'react-reveal';
 import { Map, Marker, Popup, TileLayer, Circle, CircleMarker, Polyline, Polygon, Rectangle } from "react-leaflet";
 import { Icon } from "leaflet";
+import MDFlag from "../imgs/md_flag.png";
+import MDChart from "./charts/MDChart";
+import MDChartAfter from "./charts/MDChartAfter";
 
 const center = [39.2904,-77.5]
 
@@ -59,14 +62,17 @@ const MDPage = () => {
                     const {section, title, captext, poptext, distext, landtext} = item;
                     return (
                         <Fade key={i}>
-                            <div className="statepage__item">
-                                <div className="statepage__section">{section}</div>
-                                <div className="statepage__title">{title}</div>
-                                <div className="statepage__captext">{captext}</div>
-                                <div className="statepage__poptext">{poptext}</div>
-                                <div className="statepage__distext">{distext}</div>
-                                <div className="statepage__landtext">{landtext}</div>
-                            </div>
+
+                           <div className="statepage__item">
+                                 <div className="statepage__section">{section}</div>
+                                 <img className="statepage__map" style= {{width:"500px", height:"250px"}}src={MDFlag}/>
+                                 <div className="statepage__title" >{title}</div>
+                                 <div className="statepage__captext">{captext}</div>
+                                 <div className="statepage__poptext">{poptext}</div>
+                                 <div className="statepage__distext">{distext}</div>
+                                 <div className="statepage__landtext">{landtext}</div>
+                           </div>
+
                         </Fade>
                     )
                 })}
@@ -106,6 +112,11 @@ const MDPage = () => {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
                 </Map>
+               <h1 className="chart__header">Congressional Districts By Party</h1>
+               <div className= "pieCharts">
+                  <MDChart />
+                  <MDChartAfter />
+               </div>
             </div>
         </div>
     );

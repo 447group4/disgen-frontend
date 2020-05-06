@@ -41,7 +41,7 @@ $small: "only screen and (max-width : 430px)";
 html, body, #root {
     padding: 0;
     margin: 0;
-    border: none;    
+    border: none;
     font-family: $oswald;
     color: $main-font-col;
 }
@@ -87,7 +87,7 @@ h1 {
     margin-bottom: 20px;
 
     @media #{$small} {
-        font-size: $second-header-size; 
+        font-size: $second-header-size;
     }
 }
 
@@ -99,7 +99,7 @@ h3 {
     font-size: $third-header-size;
 }
 
-input[type=text], select {    
+input[type=text], select {
     border: none;
     height: 45px;
     padding: 0 15px;
@@ -192,7 +192,7 @@ input[type=text], select {
         }
 
         >a {
-            margin-right: 85px;            
+            margin-right: 85px;
         }
     }
 
@@ -203,12 +203,12 @@ input[type=text], select {
     &__item {
         text-transform: uppercase;
         display: inline-block;
-        color: $main-nav-col;  
-        
+        color: $main-nav-col;
+
         @media #{$medium} {
             margin: 0 0 20px 0;
         }
-        
+
         &.active{
             color: $link-hover-col;
 
@@ -221,7 +221,7 @@ input[type=text], select {
 
 .header {
     background: $header-back;
-    height: 83px;    
+    height: 83px;
     position: relative;
     z-index: 5;
 
@@ -264,7 +264,7 @@ input[type=text], select {
     right: 0;
     width: 80%;
     background: $header-back;
-    z-index: 5;    
+    z-index: 5;
 }
 
 .about {
@@ -281,7 +281,7 @@ input[type=text], select {
 
         &::before, &::after {
             content: '';
-            display: block;            
+            display: block;
             position: absolute;
             height: 50px;
             width: 1px;
@@ -356,13 +356,14 @@ input[type=text], select {
         .about__section {
             margin-top: 0;
             &::before {
-                display: none;
+               display: none;
             }
         }
     }
 
     &__captext {
         font-family: $arial;
+        text-align: center;
         font-size: 17px;
         margin-bottom: 13px;
         margin-right: 50px;
@@ -370,34 +371,44 @@ input[type=text], select {
     }
     &__title {
         font-size: $second-header-size;
-        margin-bottom: 13px;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
         margin-right: 50px;
         margin-left: 50px;
     }
 
     &__poptext {
         font-family: $arial;
+        text-align: center;
         font-size: 17px;
         margin-bottom: 13px;
         margin-right: 50px;
         margin-left: 50px;
+
     }
     &__distext {
         font-family: $arial;
+        text-align: center;
         font-size: 17px;
         margin-bottom: 13px;
         margin-right: 50px;
         margin-left: 50px;
+
     }
     &__landtext {
         font-family: $arial;
+        text-align: center;
         font-size: 17px;
         margin-bottom: 13px;
         margin-right: 50px;
         margin-left: 50px;
+
     }
 
 }
+
+
 
 .leaflet-container {
     height: 800px;
@@ -418,4 +429,27 @@ h4 {
     width: 50%;
     font-size: 30px;
     display: inline-block;
+}
+
+.statepage__map{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+}
+
+.pieCharts{
+   display: flex;
+   justify-content: space-between;
+}
+
+.chart{
+   margin: 0px 100px 25px 100px;
+}
+
+.chart__header{
+   margin-top: 850px;
+   margin-bottom: 50px;
+   text-align: center;
+   font-size: 30px;
 }

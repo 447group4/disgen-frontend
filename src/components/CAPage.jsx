@@ -3,6 +3,9 @@ import { capage } from '../data/capage';
 import {Fade} from 'react-reveal';
 import { Map, Marker, Popup, TileLayer, Circle, CircleMarker, Polyline, Polygon, Rectangle } from "react-leaflet";
 import { Icon } from "leaflet";
+import CAFlag from "../imgs/ca_flag.png"
+import CAChart from "./charts/CAChart";
+import CAChartAfter from "./charts/CAChartAfter";
 
 const center = [36.78,-119.42]
 
@@ -58,6 +61,7 @@ const CAPage = () => {
                         <Fade key={i}>
                             <div className="statepage__item">
                                 <div className="statepage__section">{section}</div>
+                                <img className="statepage__map" style= {{width:"500px", height:"250px"}}src={CAFlag}/>
                                 <div className="statepage__title">{title}</div>
                                 <div className="statepage__captext">{captext}</div>
                                 <div className="statepage__poptext">{poptext}</div>
@@ -94,7 +98,12 @@ const CAPage = () => {
                     <Polygon color="purple" positions={polygon} />
                     <Polygon color="red" positions={multiPolygon} />
                     <Rectangle bounds={rectangle} color="black" />
-                </Map>               
+                </Map>
+                <h1 className="chart__header">Congressional Districts By Party</h1>
+                <div className= "pieCharts">
+                  <CAChart />
+                  <CAChartAfter />
+               </div>
             </div>
         </div>
     );
