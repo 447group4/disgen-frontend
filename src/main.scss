@@ -155,6 +155,8 @@ input[type=text], select {
 
 .prebrandtxt {
     font-size: 32px;
+    background-color: rgba(253, 181, 21, 0.5);
+    border-radius: 10px;
     color: #000000;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
@@ -290,19 +292,18 @@ input[type=text], select {
     &__item:nth-of-type(1) {
         .about__section {
             margin-top: 25px;
-            margin-bottom: 50px;
+            margin-bottom: 100px;
             &::before {
                 display: none;
             }
-        }
-    }
-
-    &__item:nth-of-type(2) {
-        .about__section {
-            margin-top: 100px;
-            margin-bottom: 50px;
-            &::before {
-                display: none;
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 50px;
+                width: 1px;
+                left: 50%;
+                border-left: 1px dotted #fff;
             }
         }
     }
@@ -310,9 +311,37 @@ input[type=text], select {
     &__item:nth-of-type(3) {
         .about__section {
             margin-top: 100px;
-            margin-bottom: 50px;
+            margin-bottom: 100px;
             &::before {
                 display: none;
+            }
+            &::before, &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 50px;
+                width: 1px;
+                left: 50%;
+                border-left: 1px dotted #fff;
+            }
+        }
+    }
+
+    &__item:nth-of-type(4) {
+        .about__section {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            &::before {
+                display: none;
+            }
+            &::before, &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 50px;
+                width: 1px;
+                left: 50%;
+                border-left: 1px dotted #fff;
             }
         }
     }
