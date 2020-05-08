@@ -12,7 +12,28 @@ export const about = [
     {
         section: 'THE TEAM',
         title: 'THE PLAYERS BEHIND THE PROJECT',
-        text: 'Salomon Ulysse, Troy Norton, Alex Pratte, Carolina Vantiem, Kirill Shats, Timothy Lin'
+        text_name: 'Salomon Ulysse',
+        text_about: 'Backend Developer -- Database'
     },
+    {
+        text_name: 'Troy Norton',
+        text_about: 'Frontend Developer'
+    },
+    {
+        text_name: 'Alex Pratte',
+        text_about: 'Backend Developer -- Algorithm'
+    },
+    {
+        text_name: 'Carolina Vantiem',
+        text_about: 'Backend Developer -- Database'
+    },
+    {
+        text_name: 'Kirill Shats',
+        text_about: 'Frontend Developer'
+    },
+    {
+        text_name: 'Timothy Lin',
+        text_about: 'Frontend Developer -- Mapping Library'
+    }
 
 ]

@@ -276,18 +276,8 @@ input[type=text], select {
         text-align: center;
         font-size: $caption-size;
         position: relative;
-        margin-bottom: 100px;
-        margin-top: 100px;
-
-        &::before, &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            height: 50px;
-            width: 1px;
-            left: 50%;
-            border-left: 1px dotted #fff;
-        }
+        margin-bottom: 25px;
+        margin-top: 50px;
 
         &::before {
             top: -70px;
@@ -297,9 +287,30 @@ input[type=text], select {
         }
     }
 
-    &__item:first-of-type {
+    &__item:nth-of-type(1) {
         .about__section {
-            margin-top: 0;
+            margin-top: 25px;
+            margin-bottom: 50px;
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__item:nth-of-type(2) {
+        .about__section {
+            margin-top: 100px;
+            margin-bottom: 50px;
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__item:nth-of-type(3) {
+        .about__section {
+            margin-top: 100px;
+            margin-bottom: 50px;
             &::before {
                 display: none;
             }
@@ -320,6 +331,21 @@ input[type=text], select {
         margin-right: 50px;
         margin-left: 50px;
     }
+
+    &__text_name {
+        font-family: $arial;
+        font-size: 22px;
+        margin-bottom: 13px;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    &__text_about {
+        font-family: $arial;
+        font-size: 17px;
+        margin-bottom: 13px;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
 }
 
 .statepage {
@@ -331,18 +357,8 @@ input[type=text], select {
         text-align: center;
         font-size: $caption-size;
         position: relative;
-        margin-bottom: 100px;
-        margin-top: 50px;
-
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            height: 50px;
-            width: 1px;
-            left: 50%;
-            border-left: 1px dotted #fff;
-        }
+        margin-bottom: 50px;
+        margin-top: 25px;
 
         &::before {
             top: -70px;
