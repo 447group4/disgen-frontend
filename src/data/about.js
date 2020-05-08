@@ -2,7 +2,12 @@ export const about = [
     {
         section: 'THE DATA',
         title: 'WHERE DID IT COME FROM?',
-        text: 'California Open Data Portal, California State Geoportal, Maryland GIS Data Catalogue, Maryland Department of Planning'
+        text_name: 'Maryland',
+        text_about: 'Maryland GIS Data Catalogue, Maryland Department of Planning'
+    },
+    {
+        text_name: 'California',
+        text_about: 'California Open Data Portal, California State Geoportal'
     },
     {
         section: 'THE SETUP',

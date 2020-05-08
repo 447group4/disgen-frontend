@@ -71,21 +71,7 @@ const CAPage = () => {
                         </Fade>
                     )
                 })}
-                <h4>Old Congressional Districts</h4>
-                <h5>New Congressional Districts</h5>
-                <Map center={center} zoom={6.2}>
-                <TileLayer
-                    attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    />
-                    <Circle center={center} fillColor="blue" radius={200} />
-                    <CircleMarker center={[39.35, -76.6]} color="red" radius={20}>
-                    <Popup>Popup in CircleMarker</Popup>
-                    </CircleMarker>
-                    <Polygon color="purple" positions={polygon} />
-                    <Polygon color="red" positions={multiPolygon} />
-                    <Rectangle bounds={rectangle} color="black" />
-                </Map>
+                <h4>California Congressional Districts</h4>
                 <Map center={center} zoom={6.2}>
                 <TileLayer
                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
