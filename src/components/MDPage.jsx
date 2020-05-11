@@ -7,6 +7,57 @@ import MDFlag from "../imgs/md_flag.png";
 import MDDistrictMap from "../imgs/mdDistricts.png";
 import MDChart from "./charts/MDChart";
 import MDChartAfter from "./charts/MDChartAfter";
+import data from './md.json';
+
+const districtList = data.districts;
+console.log(districtList)
+const district1 = districtList[0].Polygon
+
+for (var key in district1) {
+  district1[key] = district1[key].reverse()
+}
+
+const district2 = districtList[1].Polygon
+
+for (var key in district2) {
+  district2[key] = district2[key].reverse()
+}
+
+const district3 = districtList[2].Polygon
+
+for (var key in district3) {
+  district3[key] = district3[key].reverse()
+}
+
+const district4 = districtList[3].Polygon
+
+for (var key in district4) {
+  district4[key] = district4[key].reverse()
+}
+
+const district5 = districtList[4].Polygon
+
+for (var key in district5) {
+  district5[key] = district5[key].reverse()
+}
+
+const district6 = districtList[5].Polygon
+
+for (var key in district6) {
+  district6[key] = district6[key].reverse()
+}
+
+const district7 = districtList[6].Polygon
+
+for (var key in district7) {
+  district7[key] = district7[key].reverse()
+}
+
+const district8 = districtList[7].Polygon
+
+for (var key in district8) {
+  district8[key] = district8[key].reverse()
+}
 
 
 const center = [39.2904,-77.5]
@@ -83,22 +134,19 @@ const MDPage = () => {
 
                 <h4 className='newMap'> New Maryland Congressional Districts</h4>
 
-                <Map center={center} zoom={7.1}>
+                <Map center={center} zoom={8}>
                     <TileLayer
                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
-                    <Circle center={center} fillColor="blue" radius={200} />
-                    <CircleMarker center={[39.35, -76.6]} color="red" radius={20}>
-                    <Popup>Popup in CircleMarker</Popup>
-                    </CircleMarker>
-                    <Polygon color="purple" positions={polygon} />
-                    <Polygon color="red" positions={multiPolygon} />
-                    <Rectangle bounds={rectangle} color="black" />
-                    <TileLayer
-                    attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    />
+                    <Polygon color="purple" fillOpacity='.7' positions={districtList[0].Polygon} />
+                    <Polygon color="red" fillOpacity='.7' positions={districtList[1].Polygon} />
+                    <Polygon color="green" fillOpacity='.7' positions={districtList[2].Polygon} />
+                    <Polygon color="blue" fillOpacity='.7' positions={districtList[3].Polygon} />
+                    <Polygon color="pink" fillOpacity='.7' positions={districtList[4].Polygon} />
+                    <Polygon color="orange" fillOpacity='.7' positions={districtList[5].Polygon} />
+                    <Polygon color="yellow" fillOpacity='.7' positions={districtList[6].Polygon} />
+                    <Polygon color="teal" fillOpacity='.7' positions={districtList[7].Polygon} />
                 </Map>
                <h1 className="chart__header">Congressional Districts By Party</h1>
                <div className= "pieCharts">
