@@ -4,8 +4,10 @@ import {Fade} from 'react-reveal';
 import { Map, Marker, Popup, TileLayer, Circle, CircleMarker, Polyline, Polygon, Rectangle } from "react-leaflet";
 import { Icon } from "leaflet";
 import MDFlag from "../imgs/md_flag.png";
+import MDDistrictMap from "../imgs/mdDistricts.png";
 import MDChart from "./charts/MDChart";
 import MDChartAfter from "./charts/MDChartAfter";
+
 
 const center = [39.2904,-77.5]
 
@@ -65,7 +67,7 @@ const MDPage = () => {
 
                            <div className="statepage__item">
                                  <div className="statepage__section">{section}</div>
-                                 <img className="statepage__map" style= {{width:"500px", height:"250px"}}src={MDFlag}/>
+                                 <img className="statepage__map" style= {{width:"500px", height:"250px"}} src={MDFlag}/>
                                  <div className="statepage__title" >{title}</div>
                                  <div className="statepage__captext">{captext}</div>
                                  <div className="statepage__poptext">{poptext}</div>
@@ -76,7 +78,11 @@ const MDPage = () => {
                         </Fade>
                     )
                 })}
-                <h4>Maryland Congressional Districts</h4>
+                <h4> Current Maryland Congressional Districts</h4>
+                <img className="statepage__currentMap" style= {{width:"100%", height:"100%"}} src={MDDistrictMap}/>
+
+                <h4 className='newMap'> New Maryland Congressional Districts</h4>
+
                 <Map center={center} zoom={7.1}>
                     <TileLayer
                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
