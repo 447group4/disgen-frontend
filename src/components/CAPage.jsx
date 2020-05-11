@@ -3,6 +3,7 @@ import { capage } from '../data/capage';
 import {Fade} from 'react-reveal';
 import { Map, Marker, Popup, TileLayer, Circle, CircleMarker, Polyline, Polygon, Rectangle } from "react-leaflet";
 import { Icon } from "leaflet";
+import CADistrictMap from "../imgs/caliDistricts.png";
 import CAFlag from "../imgs/ca_flag.png"
 import CAChart from "./charts/CAChart";
 import CAChartAfter from "./charts/CAChartAfter";
@@ -71,7 +72,13 @@ const CAPage = () => {
                         </Fade>
                     )
                 })}
-                <h4>California Congressional Districts</h4>
+
+                <h4 className ="caliDistrictMapHeader"> Current California Congressional Districts</h4>
+                <img className="statepage__currentMap" style= {{width:"100%", height:"100%"}} src={CADistrictMap}/>
+
+                <h4 className='newMapCali'> New California Congressional Districts</h4>
+
+
                 <Map center={center} zoom={6.2}>
                 <TileLayer
                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
