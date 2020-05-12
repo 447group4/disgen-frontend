@@ -11,10 +11,10 @@ class CAChart extends Component{
       super(props)
       this.state = {
 
-         labels: ['Democrat', 'Republican'],
+         labels: ['Democrat', 'Republican', 'Libertarian', 'Green', 'Independent', 'Peace & Freedom'],
          datasets: [{
-            data: [46,7],
-            backgroundColor: ['blue','red']
+            data: [8753788, 4483810, 478500, 278657, 120739, 66101],
+            backgroundColor: ['blue','red', 'yellow', 'green', 'grey', '#83F944']
          }]
       }
    }
@@ -30,7 +30,7 @@ class CAChart extends Component{
                datasets: this.state.datasets
             }}
 
-            height = '250px'
+            height = '500px'
          />
          <br />
          </div>

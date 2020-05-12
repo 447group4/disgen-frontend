@@ -494,8 +494,10 @@ h4 {
 }
 
 .pieCharts{
-   display: flex;
-   justify-content: space-between;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
 }
 
 .chart{
@@ -503,10 +505,10 @@ h4 {
 }
 
 .chart__header{
-   margin-top: 100px;
+   margin-top: 75px;
    margin-bottom: 50px;
    text-align: center;
-   font-size: 30px;
+   font-size: 40px;
 }
 
 .statepage__currentMap{

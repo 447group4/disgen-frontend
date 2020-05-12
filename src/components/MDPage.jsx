@@ -6,7 +6,6 @@ import { Icon } from "leaflet";
 import MDFlag from "../imgs/md_flag.png";
 import MDDistrictMap from "../imgs/mdDistricts.png";
 import MDChart from "./charts/MDChart";
-import MDChartAfter from "./charts/MDChartAfter";
 import data from './md.json';
 
 const districtList = data.districts;
@@ -148,10 +147,9 @@ const MDPage = () => {
                     <Polygon color="yellow" fillOpacity='.7' positions={districtList[6].Polygon} />
                     <Polygon color="teal" fillOpacity='.7' positions={districtList[7].Polygon} />
                 </Map>
-               <h1 className="chart__header">Congressional Districts By Party</h1>
+               <h1 className="chart__header">Number of Voters By Party</h1>
                <div className= "pieCharts">
                   <MDChart />
-                  <MDChartAfter />
                </div>
             </div>
         </div>

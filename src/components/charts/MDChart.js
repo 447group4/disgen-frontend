@@ -11,10 +11,10 @@ class MDChart extends Component{
       super(props)
       this.state = {
 
-         labels: ['Democrat', 'Republican'],
+         labels: ['Democrat', 'Republican', 'Libertarian','Green','Other'],
          datasets: [{
-            data: [7,1],
-            backgroundColor: ['blue','red']
+            data: [1677928, 943169, 79605, 35945, 44799],
+            backgroundColor: ['blue','red','yellow','green','grey']
          }]
       }
    }
@@ -31,7 +31,7 @@ class MDChart extends Component{
                datasets: this.state.datasets
             }}
 
-            height = '250px'
+            height = '500px'
 
          />
          <br />

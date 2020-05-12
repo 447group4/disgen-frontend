@@ -6,7 +6,6 @@ import { Icon } from "leaflet";
 import CADistrictMap from "../imgs/caliDistricts.png";
 import CAFlag from "../imgs/ca_flag.png"
 import CAChart from "./charts/CAChart";
-import CAChartAfter from "./charts/CAChartAfter";
 
 const center = [36.78,-119.42]
 
@@ -92,10 +91,9 @@ const CAPage = () => {
                     <Polygon color="red" positions={multiPolygon} />
                     <Rectangle bounds={rectangle} color="black" />
                 </Map>
-                <h1 className="chart__header">Congressional Districts By Party</h1>
+                <h1 className="chart__header">Number of Voters By Party</h1>
                 <div className= "pieCharts">
                   <CAChart />
-                  <CAChartAfter />
                </div>
             </div>
         </div>
