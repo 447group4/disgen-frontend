@@ -1,11 +1,16 @@
 import React from 'react';
 import { about } from '../data/about';
 import {Fade} from 'react-reveal';
+import AboutChart from "./charts/aboutChart";
 
 const About = () => {
     return (
         <div className="wrapper">
             <div className="about">
+            <div className="aboutChartDiv">
+               <h1 className="aboutChartHeader"> Effects of Gerrymandering  </h1>
+               <AboutChart />
+            </div>
                 {about.map((item, i) => {
                     const {section, title, text, text_name, text_about} = item;
                     return (
