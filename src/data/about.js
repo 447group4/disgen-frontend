@@ -12,7 +12,7 @@ export const about = [
     {
         section: 'THE SETUP',
         title: 'HOW DOES THIS ALL WORK?',
-        text: 'SQL Database, React, Leaflet, OpenStreetMaps, Python, Javascript'
+        text: 'The inner-workings of this web app include: React, Leaflet, OpenStreetMaps, MySQL Database, Python, Javascript'
     },
     {
         section: 'THE TEAM',
